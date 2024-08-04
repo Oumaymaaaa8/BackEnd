@@ -8,7 +8,7 @@ Application de gestion des locations immobilières utilisant Laravel pour le bac
 
 - **Backend** : Laravel
 - **Frontend** : Vue.js
-- **Base de données** : MySQL (ou autre)
+- **Base de données** : Mariabd
 
 ## Structure du Projet
 
