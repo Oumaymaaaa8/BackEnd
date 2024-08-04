@@ -38,10 +38,4 @@ Application de gestion des locations immobilières utilisant Laravel pour le bac
 2. **Frontend** :
    - Installez les dépendances et démarrez le serveur Vue.js.
 
-## Contributions
 
-Les contributions sont les bienvenues. Veuillez ouvrir une pull request pour proposer des modifications.
-
-## Licence
-
-Ce projet est sous la licence [MIT](LICENSE).
