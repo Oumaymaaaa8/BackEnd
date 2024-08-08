@@ -10,7 +10,6 @@ class AgentController extends Controller
 {
     public function index()
     {
-        echo "selemmm";
         $agents = Agent::get();
         if($agents->count()>0){
             return AgentResource::collection($agents);

@@ -17,7 +17,7 @@ class location extends Model
         'description', 
         'client_id', 
         'propriete_id', 
-        'agent_id'
+        'user_id'
     ];
 
     public function client()
@@ -32,8 +32,8 @@ class location extends Model
     }
 
     // Relation avec le modèle Agent
-    public function agent()
+    public function user()
     {
-        return $this->belongsTo(Agent::class); // Utilisez le bon nom de relation
+        return $this->belongsTo(User::class); // Utilisez le bon nom de relation
     }
 }

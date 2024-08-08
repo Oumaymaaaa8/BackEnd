@@ -22,7 +22,7 @@ return new class extends Migration
             $table->timestamps(); // Colonnes created_at et updated_at
             $table->foreignId('client_id')->constrained('clients')->onDelete('cascade');
             $table->foreignId('propriete_id')->constrained('proprietes')->onDelete('cascade');
-            $table->foreignId('agent_id')->constrained('agents')->onDelete('cascade');        });
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');        });
     }
 
     /**

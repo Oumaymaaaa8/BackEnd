@@ -11,7 +11,7 @@ class LocationController extends Controller
 {
     public function index()
     {             
-        $locations = Location::with(['client', 'agent', 'propriete'])->get();
+        $locations = Location::with(['client', 'user', 'propriete'])->get();
 
         if($locations->count()>0){
             return LocationResource::collection($locations);
@@ -31,7 +31,7 @@ class LocationController extends Controller
             'description' => 'nullable|string',
             'client_id' => 'required|exists:clients,id',
             'propriete_id' => 'required|exists:proprietes,id',
-            'agent_id' => 'required|exists:agents,id',
+            'user_id' => 'required|exists:users,id',
         ]);
         
         $propriete = Location::create($validatedData);
@@ -66,7 +66,7 @@ class LocationController extends Controller
             'description' => 'nullable|string',
             'client_id' => 'required|exists:clients,id',
             'propriete_id' => 'required|exists:proprietes,id',
-            'agent_id' => 'required|exists:agents,id',
+            'user_id' => 'required|exists:users,id',
         ]);
         $location  -> update ([
             'statut' => $request->statut,
@@ -77,7 +77,7 @@ class LocationController extends Controller
             'description' => $request->description,
             'client_id' =>$request->client_id,
             'propriete_id' =>$request->propriete_id,
-            'agent_id' => $request->agent_id,
+            'user_id' => $request->user_id,
 
         ]);
         return response()->json([
